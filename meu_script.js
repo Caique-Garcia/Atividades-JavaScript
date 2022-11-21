@@ -35,3 +35,15 @@ c = null
 document.write('<h1>' + a +'</h1>')
 
 document.write('<h1>' + b +'</h1>')
+
+var media = 7
+var nota = prompt('Digite a nota do aluno: ')
+
+if (nota>=media) {
+	document.write('<h1>O aluno foi aprovado!</h1>')
+} else {
+	document.write('<h1>O aluno foi reprovado.</h1>')
+}
+
+
+
