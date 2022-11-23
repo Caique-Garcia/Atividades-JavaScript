@@ -38,8 +38,11 @@ document.write('<h1>' + b +'</h1>')
 
 var media = 7
 var nota = prompt('Digite a nota do aluno: ')
+var faltas = prompt('Digite a quantidade de faltas: ')
+var faltas_max = 15
 
-if (nota>=media) {
+
+if (nota>=media && faltas <= faltas_max) {
 	document.write('<h1>O aluno foi aprovado!</h1>')
 } else {
 	document.write('<h1>O aluno foi reprovado.</h1>')
@@ -53,6 +56,8 @@ variavel2 = parseFloat(variavel2)
 
 console.log(variavel1)
 console.log(variavel2)
+
+
 
 document.write(variavel1 + variavel2)
 
