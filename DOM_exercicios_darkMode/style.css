@@ -1,0 +1,38 @@
+* {
+	font-family: var(--main-font);
+}
+
+:root{
+	/*Variaveis*/
+	--main-font: 'Manrope', Helvetica, sans-serif;	
+
+}
+
+#principal {
+	display: flex;
+	justify-content: center;
+}
+
+#secundaria {
+	margin-top: 100px;
+	text-align: center;
+}
+
+#quadrado {
+	margin: auto;
+}
+
+button {
+	width: 65px;
+	font-size: 0.7em;
+}
+
+.night {
+	background: black;
+	color: whitesmoke;
+}
+
+.day {
+	background: whitesmoke;
+	color: black;
+}
