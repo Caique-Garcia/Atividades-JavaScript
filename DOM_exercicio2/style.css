@@ -1,0 +1,27 @@
+* {
+	font-family: var(--main-font);
+}
+
+:root{
+	/*Variaveis*/
+	--main-font: 'Manrope', Helvetica, sans-serif;	
+
+}
+
+#principal {
+	display: flex;
+	justify-content: center;
+}
+
+#secundaria {
+	text-align: center;
+}
+
+#quadrado {
+	margin: auto;
+}
+
+button {
+	width: 65px;
+	font-size: 0.7em;
+}
