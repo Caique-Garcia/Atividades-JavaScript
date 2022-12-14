@@ -1,6 +1,7 @@
 
 /*Criando array*/
-var lista_objetos = Array()
+var lista_objetos = Array('Caique','Rafael','Caio')
+
 
 function adicionar() {
 	/*Recebendo o valor digitado no campo*/
@@ -20,7 +21,8 @@ function adicionar() {
 			/*Add objeto caso não exista*/
 			lista_objetos.push(objeto)
 			console.log(lista_objetos)
-			console.log(typeof(lista_objetos))
+			/*Verifica se a variavel é ou não um Array*/
+			console.log(Array.isArray(lista_objetos))
 
 		}else{
 			/*Exibir mensagem caso o objeto já esxista*/
