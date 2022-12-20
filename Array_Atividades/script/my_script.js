@@ -22,3 +22,20 @@ while (i < listaNomes.length) {
 	document.write('Codigo: ' + i + ' Cliente: '+ listaNomes[i] + '<br />')
 	i++
 }
+
+document.write('<br />')
+
+i = 1
+var j = 1
+
+while (i <= 10) {
+
+	j = 1
+	while (j <= 10){
+		document.write(i + ' x ' + j + ' = '+ (i*j) + '<br />')
+		j++
+	}
+
+	document.write('<br />')
+	i++
+}
