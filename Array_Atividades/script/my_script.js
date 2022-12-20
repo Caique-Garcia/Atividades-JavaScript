@@ -25,6 +25,8 @@ listaNomes.forEach(c)
 
 document.write('<br />')
 
+/*operador in seguido do array faz com que o for
+percorra todo o array*/
 for(var i in listaNomes){
 	document.write('Codigo: ' + i + ' Cliente: '+ listaNomes[i] + '<br />')
 }
@@ -32,6 +34,8 @@ for(var i in listaNomes){
 document.write('<br />')
 i = 0
 
+/*'.lenght no final do nome do array traz o tamanho
+do mesmo'*/
 while (i < listaNomes.length) {
 	document.write('Codigo: ' + i + ' Cliente: '+ listaNomes[i] + '<br />')
 	i++
