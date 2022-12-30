@@ -25,25 +25,52 @@ function calcular() {
 
 		console.log(aux)
 
+		/*Criando elemento*/
+		let resultado = document.createElement('div')
+
+		/*Adicionando classes*/
+		resultado.className = 'absolute'
+
+		/*Adicionando Id*/
+		resultado.id = 'resposta'
+
+		/*Adicionando elemento no body*/
+		document.body.appendChild(resultado)
+
+		/*Criando elemento span dentro da div*/
+		let msg = document.createElement('span')
+		msg.id = 'msg'
+		resposta.appendChild(msg)	
+		
 		/*De acordo com resultado exibir a resposta*/
 		if(aux>7){
 			/*Tornar resultado visivel*/
-			document.getElementById('gasolina').style.visibility = 'visible'
+			document.getElementById('msg').textContent = "Gasolina é a melhor opção!"
 
 		}else {
 			/*Tornar resultado visivel*/
-			document.getElementById('etanol').style.visibility = 'visible'
+			document.getElementById('msg').textContent = "Etanol é a melhor opção!"
 		}
+
+		/*Criando botão voltar*/
+		let voltar = document.createElement('button')
+		voltar.onclick = function () {
+			/*Voltar pra tela inicial*/
+			let res = document.getElementById('resposta')
+			res.remove()
+		}
+		voltar.type = 'button'
+		voltar.className = 'btn btn-success voltar'
+		voltar.id = 'voltar'
+		voltar.textContent = 'Voltar'
+		resposta.appendChild(voltar)
+
+
 	} else {
+		/*Caso um dos campos esteja vazio é retornado a seguinte mensagem*/
 		alert("Por favor digite um valor!")
-	}
+		}
 
-}
-
-function voltar() {
-	/*Voltar pra tela inicial*/
-	document.getElementById('gasolina').style.visibility = 'hidden'
-	document.getElementById('etanol').style.visibility = 'hidden'
-	
 	
 }
+
