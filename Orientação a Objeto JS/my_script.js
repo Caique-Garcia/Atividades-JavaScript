@@ -110,3 +110,97 @@ tv.canalAtivo = 7
 
 //Invocando método get criado
 tv.canalAtivo
+
+/*Pilar da Herança*/
+class Animal {
+	constructor(cor,tamanho){
+		this.cor = cor
+		this.tamanho = tamanho
+	}
+
+	dormir(){
+		console.log('Dormir')
+	}
+}
+
+/*Indicando que a classe Cachorro herdara alguns
+atributos da classe Animal*/
+class Cachorro extends Animal {
+	constructor(cor = 'caramelo', tamanho = 40){
+		/*Operador super informa que os atributos da classe pai
+		serão reaproveitados na classe filho*/
+		/*Usando o operador super para passar paremetros pra
+		a classe pai*/
+		super(cor,tamanho)
+		this.orelhas = 'Grandes'
+	}
+
+	correr(){
+		console.log('Correr')
+	}
+
+	
+	rosnar(){
+		console.log('Rosnar')
+	}
+}
+
+class Passaro extends Animal{
+	constructor(cor,tamanho,bico = 'Curto'){
+		super(cor, tamanho)
+		this.bico = bico
+	}
+
+	voar(){
+		console.log('Voar')
+	}
+	
+}
+
+class Papagaio extends Passaro {
+	constructor(cor,tamanho, sabeFalar){
+		super(cor,tamanho)
+		this.sabeFalar = sabeFalar
+	}
+
+	fala(){
+		console.log('Papagaio falando...')
+	}
+}
+
+let loro = new Papagaio('Azul',20,true)
+let dog = new Cachorro()
+let piriquito = new Passaro('Verde',30)
+
+console.log(dog)
+console.log(piriquito)
+console.log(loro)
+
+dog.dormir()
+
+/*Objetos literais/estaticos*/
+class Produto {
+	constructor(descricao,preco){
+		this.descricao = descricao
+		this.preco = preco
+	}
+
+	verDescricao(){
+		console.log(`${this.descricao} por apenas ${this.preco}`)
+	}
+}
+
+let produto = new Produto('Notebook',2200)
+produto.verDescricao()
+
+/*Objetos literais são usados quando não nescecidade de 
+crar uma coleção de objetos*/
+let produtoLiteral = {
+	descricao: 'Geladeira',
+	preco: 1800,
+	verDescricao: function () {
+		console.log(`${this.descricao} por apenas ${this.preco}`)
+	}
+}
+
+produtoLiteral.verDescricao()
