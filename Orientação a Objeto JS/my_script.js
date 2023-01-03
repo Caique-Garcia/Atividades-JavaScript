@@ -204,3 +204,5 @@ let produtoLiteral = {
 }
 
 produtoLiteral.verDescricao()
+
+//Objeto Literal
